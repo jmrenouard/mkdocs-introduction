@@ -1,0 +1,13 @@
+<section>
+  <h2>This is the plan</h2>
+
+  <ul>
+    {% with color="#17BAF9" %}
+    <li><span {% if active == 'intro' %}class="toc-active" style="color: {{ color }};"{% endif %}>Introduction</span></li>
+    <li><span {% if active == 'mkdocs' %}class="toc-active" style="color: {{ color }};"{% endif %}>Install & Use Mkdocs</span></li>
+    <li><span {% if active == 'git' %}class="toc-active" style="color: {{ color }};"{% endif %}>Git Basics</span></li>
+    <li><span {% if active == 'github' %}class="toc-active" style="color: {{ color }};"{% endif %}>Your GitHub Profile</span></li>
+    <li><span {% if active == 'github-pages' %}class="toc-active" style="color: {{ color }};"{% endif %}>GitHub Pages</span></li>
+    {% endwith %}
+  </ul>
+</section>
