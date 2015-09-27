@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Your Title</title>
+		<title>mkdocs Introduction</title>
 
-		<meta name="description" content="Your Description">
-		<meta name="author" content="Your Name">
+		<meta name="description" content="Slides featuring a short introduction to mkdocs and git">
+		<meta name="author" content="Martin Brochhaus">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -15,7 +15,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
+		<link rel="stylesheet" href="css/mbrochh.css">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -32,6 +33,16 @@
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
+
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-42580283-2', 'auto');
+		  ga('send', 'pageview');
+		</script>
 	</head>
 
 	<body>
@@ -41,56 +52,89 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
                 
-<section>
-    <h1>Your Title</h1>
-    <h3>Your sub-title</h3>
-</section>
 <section data-markdown>
     <script type="text/template">
-        ## Testing Markdown
+      # Mkdocs & Git Introduction
+      #### Learn to publish your documentation on GitHub
 
-        This _should_ be __bold__ and this should be a [link](https://github.com/mbrochh/reveal-template).
-
-        ### Heading 3
-
-        * A list
-        * With three
-        * items
+      <small>Press SPACE or SHIFT+SPACE to move through the slides...</small>
     </script>
 </section>
-<section>
-    <h2>Testing code snippets</h2>
-    <pre><code>
-    import os
-    path = os.path.join('foo', 'bar')
-    def do_something(path):
-        return path
-    </code></pre>
+<section data-markdown>
+  <script type="text/template">
+    ## Who am I?
+
+    * Martin Brochhaus
+    * Founder of [Bitmazk Pte Ltd](https://bitmazk.com)
+    * Twitter: [@mbrochh](https://twitter.com/mbrochh)
+    * Github: [mbrochh](https://github.com/mbrochh)
+    * Email: mbrochh at gmail dot com
+  </script>
+</section>
+<section data-markdown>
+  <script type="text/template">
+    ## Thank you, PayPal Singapore &#9825; &#9825; &#9825;
+
+    > Big thanks to Laurence Putra of PayPal Singapore for kindly offering to
+    > host this event and for sponsoring pizza and softdrinks.
+  </script>
 </section>
 <section>
-    <section data-background="#ff0000" data-markdown>
-        <script type="text/template">
-            ## Testing backgrounds
+  <section data-markdown>
+    <script type="text/template">
+      ##We have a Slack.com community!
 
-            Now we are red
-        </script>
-    </section>
-    <section data-background="#00ff00" data-markdown>
-        <script type="text/template">
-            ## Testing backgrounds
+      PyLadiesSG has a community on Slack.
+      Myself and others are idling there permanently and we are happy to mentor
+      anyone who needs help.
 
-            Now we are green
-        </script>
-    </section>
-    <section data-background="#0000ff" data-markdown>
-        <script type="text/template">
-            ## Testing backgrounds
+      Visit [pyladies-sg-slackin.herokuapp.com](http://pyladies-sg-slackin.herokuapp.com)
+      if you are based in Singapore and if you would like an invite.<br />
+      <img src="http://pyladies-sg-slackin.herokuapp.com/badge.svg">
+    </script>
+  </section>
+</section>
+<section>
+  <section>
+  <h2>This is the plan</h2>
 
-            Now we are blue
+  <ul>
+    
+    <li><span class="toc-active" style="color: #17BAF9;">Introduction</span></li>
+    <li><span >Install & Use Mkdocs</span></li>
+    <li><span >Git Basics</span></li>
+    <li><span >Your GitHub Profile</span></li>
+    <li><span >GitHub Pages</span></li>
+    
+  </ul>
+</section>
+  <section data-markdown>
+    <script type="text/template">
+      ##Introduction
 
-            <small>dabadi dabadai...</small>
-        </script>
-    </section>
+      * No one can learn programming in a day
+        * or in a week
+        * or in a month
+        * or in a year
+      * If you want to become really good
+        * you have to try things yourself
+        * you should find a mentor or a user group to guide you
+      * This tutorial is just a tiny step into the right direction
+      * I hope that
+        * it empowers you to take more steps on your own
+        * you will come back for more :)
+      </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Follow along
+
+      * You can open this presentation in your browser and follow along
+      * Open: [mbrochh.github.io/python-introduction](https://mbrochh.github.io/python-introduction)
+    </script>
+  </section>
+
 </section>
 
             </div>
@@ -105,6 +149,7 @@
 			// Full list of configuration options available at:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
+				width: "100%",
 				controls: true,
 				progress: true,
 				history: true,
