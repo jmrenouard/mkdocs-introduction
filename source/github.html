@@ -1,0 +1,49 @@
+<section>
+  {% with active=active %}{% include "source/toc.html" %}{% endwith %}
+  <section data-markdown>
+    <script type="text/template">
+      ##Create your GitHub profile
+
+      * Create an account at https://github.com
+      * Verify your email address
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Create your SSH key
+
+      * On Windows, start git-bash
+      * On OSX and Ubuntu just start the Terminal
+
+<pre><code>ssh-keygen -t rsa -b 4096 -C "your@email.com"
+# Press enter several times
+cat ~/.ssh/id_rsa.pub
+# Copy the output into the clipboard (CTRL+C)
+</code></pre>
+
+      * Go to https://github.com/settings/ssh
+      * Click at "Add SSH key"
+      * Paste your public key into the field and click "Add key"
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ## What is this SSH key?
+
+      * SSH is an encrypted network protocol
+      * It allows you to securely login to remote servers
+      * For the encryption to work, you have to create a "key"
+      * The key consists of a public and a private part
+      * Both parts are files in your `~/.ssh/` folder
+      * When you give your public key to GitHub, you can now<br />
+        "SSH into" their server and upload your files
+      * **NEVER** give away your private key.
+      * If you lose your private key, you lose access to all servers<br />
+        where you used it before (not so bad for GitHub, just make<br />
+        a new keypair).
+    </script>
+  </section>
+
+</section>

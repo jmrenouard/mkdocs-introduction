@@ -1,0 +1,170 @@
+<section>
+  {% with active=active %}{% include "source/toc.html" %}{% endwith %}
+  <section data-markdown>
+    <script type="text/template">
+      ##Install Git (Windows)
+
+      * Download and install from here: [https://git-scm.com/download/win](https://git-scm.com/download/win)
+      * On the wizard step "Adjusting your PATH environment"
+        * Chose the second option
+      * Chose default options for all the rest
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Install Git (Ubuntu)
+
+      * Run: sudo apt-get install git
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Install Git (OSX)
+
+      * Download and install from here: [http://git-scm.com/download/mac](http://git-scm.com/download/mac)
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Configure Git
+
+      * You must tell git who you are so that it can write proper logs
+<pre><code>git config --global user.email your@email.com
+git config --global user.name "Your Name"
+</code></pre>
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Create a repository
+
+      * When you run `git init` in any folder, it will be turned into a
+        git-repository.
+<pre><code>mkdir -p ~/Projects/git-test
+cd ~/Projects/git-test
+git init
+</code></pre>
+      * Git creates a hidden folder `.git` in your folder
+      * You can see it with `ls -force`
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Create a file
+
+      * Let's put a first file into your repository
+<pre><code>cd ~/Projects/git-test
+atom test.txt
+# Add "Hello World" to the file, save and close atom
+git status
+</code></pre>
+      * `git status` will show you that there is one new untracked file
+      * **Untracked** means, that this file is currently **not** under version control
+      * If we delete this file now, we will lose it
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Prepare your first commit
+
+      * Let's add our first file to the repository
+
+<pre><code>git add test.txt
+git status
+</code></pre>
+
+      * `git status` will now tell you that a new file has been marked as **to be committed**
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Make your first commit
+
+<pre><code>git commit
+# It opens a command line editor for writing a commit message
+# Press "i" to get into insert-mode
+# Write: "Initial commit"
+# Press CTRL+C to get out of insert-mode
+# Press ":wq" (write and quit)
+git log
+</code></pre>
+
+      * `git commit` will save the current status of your project
+      * `git log` shows you all your past commits
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Make your first change
+
+<pre><code>atom test.txt
+# Remove the "Hello World"
+# Write something else into the file
+# Save and close atom
+git status
+</code></pre>
+
+      * `git status` will tell you that you have changed one file
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Review your change
+
+<pre><code>git diff</code></pre>
+
+      * `git diff` will show you exactly what has been changed
+      * You can exit the diff by pressing `"q"`
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Prepare your second commit
+
+<pre><code>git add test.txt
+git status
+</code></pre>
+
+      * `git status` will now tell you that you are about to commit the changes made in `test.txt`
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Commit your changes
+
+<pre><code>git commit
+# Again, it opens a command line editor for writing a commit message
+# Press "i" to get into insert-mode
+# Write: "Changed test.txt a little bit"
+# Press CTRL+C to get out of insert-mode
+# Press ":wq" (write and quit)
+git log
+</code></pre>
+
+      * `git log` will now show you both commits that you have made
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##This is just the tip of the iceberg
+
+      * The commands above are just minimal basics
+      * Later you will learn about `branches` and `merging` and `forking` and
+        `pulling` and `pushing`
+      * We will probably do a workshop only for Git, soon.
+    </script>
+  </section>
+
+</section>

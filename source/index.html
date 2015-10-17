@@ -5,5 +5,10 @@
 {% include "source/whoami.html" %}
 {% include "source/thanks_to_paypal.html" %}
 {% include "source/slack.html" %}
+{% include "source/slides.html" %}
 {% with active="intro" %}{% include "source/introduction.html" %}{% endwith %}
+{% with active="demo" %}{% include "source/demo.html" %}{% endwith %}
+{% with active="git" %}{% include "source/git.html" %}{% endwith %}
+{% with active="github" %}{% include "source/github.html" %}{% endwith %}
+{% with active="mkdocs" %}{% include "source/mkdocs.html" %}{% endwith %}
 {% endblock %}

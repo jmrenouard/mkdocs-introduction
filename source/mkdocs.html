@@ -1,0 +1,31 @@
+<section>
+  {% with active=active %}{% include "source/toc.html" %}{% endwith %}
+  <section data-markdown>
+    <script type="text/template">
+      ##Install MkDocs
+
+      * Create a virtual environment and install MkDocs
+      * You can learn more about this in [our past workshop](http://mbrochh.github.io/python-introduction/#/9)
+
+<pre><code>mkvirtualenv pyladies-sg
+pip install mkdocs
+</code></pre>
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Start your MkDocs project
+
+<pre><code>mkdir -p ~/Projects/mkdocs-test
+cd ~/Projects/mkdocs-test
+mkdocs new src
+cd src
+ls
+</code></pre>
+
+      * The `mkdocs` command creates a config file (`mkdocs.yml`)
+      * and a first content file (`docs/index.md`) for you
+    </script>
+  </section>
+</section>

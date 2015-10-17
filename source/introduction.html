@@ -2,28 +2,113 @@
   {% with active=active %}{% include "source/toc.html" %}{% endwith %}
   <section data-markdown>
     <script type="text/template">
-      ##Introduction
+      ##What are we going to do today?
 
-      * No one can learn programming in a day
-        * or in a week
-        * or in a month
-        * or in a year
-      * If you want to become really good
-        * you have to try things yourself
-        * you should find a mentor or a user group to guide you
-      * This tutorial is just a tiny step into the right direction
-      * I hope that
-        * it empowers you to take more steps on your own
-        * you will come back for more :)
+      * Create a website with [mkdocs](http://www.mkdocs.org)
+      * Add some content using [Markdown](http://daringfireball.net/projects/markdown/)
+      * Create a profile on [GitHub](https://github.com)
+      * Create our first [Git](http://www.git-scm.com) repository
+      * Publish our website on GitHub Pages ([like these slides](https://github.com/mbrochh/mkdocs-introduction)!)
       </script>
   </section>
 
   <section data-markdown>
     <script type="text/template">
-      ##Follow along
+      ##So what is this MkDocs?
 
-      * You can open this presentation in your browser and follow along
-      * Open: [mbrochh.github.io/python-introduction](https://mbrochh.github.io/python-introduction)
+      * MkDocs is a "static site generator"
+      * Dynamic sites require a programming language, a webserver and a database
+      * Static sites are just a bunch of HTML files that can run anywhere
+      * MkDocs specializes on creating documentation websites
+      * Content is generated via Markdown files.
+      * Official website: [http://www.mkdocs.org](http://www.mkdocs.org)
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Ok, but I never heard about Markdown!
+
+      * Markdown is a formatting syntax
+      * It is also a text-to-HTML conversion tool
+      * It is easy to read for humans *and* for machines
+      * You write simple text files and end up with complex HTML files
+      * Official website: [http://daringfireball.net/projects/markdown/](http://daringfireball.net/projects/markdown/)
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##What do you mean by easy to read?
+
+      Markdown turns this:
+
+<pre><code># Headline
+
+Some text...
+
+* List item 1
+* List item 2
+</code></pre>
+      Into this:
+
+<pre><code>{% filter escape %}<h1>Headline</h1>
+
+<p>Some text...</p>
+
+<ul>
+  <li>* List item 1</li>
+  <li>* List item 2</li>
+</ul>
+{% endfilter %}
+</code></pre>
+
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##So what is this Git that everyone's talking about?
+
+      * Git is a version control system
+      * You "put a folder under version control"
+      * This folder is now a "Git repository"
+      * Git can record all changes that you make
+      * Now you can "go back in time" to older versions of your files
+      * You can publish your code online
+      * Others can collaborate and send "pull requests"
+      * Official website: [http://www.git-scm.com](http://www.git-scm.com)
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##And what about GitHub?
+
+      * Git is a software, GitHub is a company
+      * They did not invent Git, but they saw the potential early on
+      * They provide services around Git
+      * Mainly, they allow you to host your repositories online for free
+      * They build many features around your repositoriy
+        * Like issue trackers
+        * Code comparison view
+        * Commenting system
+        * Social features like notifications, following, liking,
+      * Main competitor: [Bitbucket](https://bitbucket.org)
+      * Oficial website: https://github.com
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##And finally: GitHub Pages?
+
+      * GitHub allows you to upload a bunch of HTML files
+      * They will be served by their powerful infrastructure for free
+      * You don't have any programming language or database available
+      * So you can only host static pages
+      * Many repositories use this to host their documentation
+      * Official documentation: [https://pages.github.com](https://pages.github.com)
     </script>
   </section>
 

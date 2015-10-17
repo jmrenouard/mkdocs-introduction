@@ -55,7 +55,7 @@
 <section data-markdown>
     <script type="text/template">
       # Mkdocs & Git Introduction
-      #### Learn to publish your documentation on GitHub
+      #### Let's dig into Git, GitHub, Markdown and publish a website!
 
       <small>Press SPACE or SHIFT+SPACE to move through the slides...</small>
     </script>
@@ -75,8 +75,8 @@
   <script type="text/template">
     ## Thank you, PayPal Singapore &#9825; &#9825; &#9825;
 
-    > Big thanks to Laurence Putra of PayPal Singapore for kindly offering to
-    > host this event and for sponsoring pizza and softdrinks.
+    > Big thanks to Laurence Putra of PayPal Singapore for kindly
+    > hosting this event repeatedly and for sponsoring pizza and softdrinks.
   </script>
 </section>
 <section>
@@ -94,6 +94,14 @@
     </script>
   </section>
 </section>
+<section data-markdown>
+  <script type="text/template">
+    ##Follow along!
+
+    * You can open this presentation in your browser and follow along
+    * Open: [mbrochh.github.io/mkdocs-introduction](https://mbrochh.github.io/mkdocs-introduction)
+  </script>
+</section>
 <section>
   <section>
   <h2>This is the plan</h2>
@@ -101,40 +109,468 @@
   <ul>
     
     <li><span class="toc-active" style="color: #17BAF9;">Introduction</span></li>
-    <li><span >Install & Use Mkdocs</span></li>
+    <li><span >Demo</span></li>
     <li><span >Git Basics</span></li>
     <li><span >Your GitHub Profile</span></li>
+    <li><span >Install & Use MkDocs</span></li>
     <li><span >GitHub Pages</span></li>
     
   </ul>
 </section>
   <section data-markdown>
     <script type="text/template">
-      ##Introduction
+      ##What are we going to do today?
 
-      * No one can learn programming in a day
-        * or in a week
-        * or in a month
-        * or in a year
-      * If you want to become really good
-        * you have to try things yourself
-        * you should find a mentor or a user group to guide you
-      * This tutorial is just a tiny step into the right direction
-      * I hope that
-        * it empowers you to take more steps on your own
-        * you will come back for more :)
+      * Create a website with [mkdocs](http://www.mkdocs.org)
+      * Add some content using [Markdown](http://daringfireball.net/projects/markdown/)
+      * Create a profile on [GitHub](https://github.com)
+      * Create our first [Git](http://www.git-scm.com) repository
+      * Publish our website on GitHub Pages ([like these slides](https://github.com/mbrochh/mkdocs-introduction)!)
       </script>
   </section>
 
   <section data-markdown>
     <script type="text/template">
-      ##Follow along
+      ##So what is this MkDocs?
 
-      * You can open this presentation in your browser and follow along
-      * Open: [mbrochh.github.io/python-introduction](https://mbrochh.github.io/python-introduction)
+      * MkDocs is a "static site generator"
+      * Dynamic sites require a programming language, a webserver and a database
+      * Static sites are just a bunch of HTML files that can run anywhere
+      * MkDocs specializes on creating documentation websites
+      * Content is generated via Markdown files.
+      * Official website: [http://www.mkdocs.org](http://www.mkdocs.org)
     </script>
   </section>
 
+  <section data-markdown>
+    <script type="text/template">
+      ##Ok, but I never heard about Markdown!
+
+      * Markdown is a formatting syntax
+      * It is also a text-to-HTML conversion tool
+      * It is easy to read for humans *and* for machines
+      * You write simple text files and end up with complex HTML files
+      * Official website: [http://daringfireball.net/projects/markdown/](http://daringfireball.net/projects/markdown/)
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##What do you mean by easy to read?
+
+      Markdown turns this:
+
+<pre><code># Headline
+
+Some text...
+
+* List item 1
+* List item 2
+</code></pre>
+      Into this:
+
+<pre><code>&lt;h1&gt;Headline&lt;/h1&gt;
+
+&lt;p&gt;Some text...&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;* List item 1&lt;/li&gt;
+  &lt;li&gt;* List item 2&lt;/li&gt;
+&lt;/ul&gt;
+
+</code></pre>
+
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##So what is this Git that everyone's talking about?
+
+      * Git is a version control system
+      * You "put a folder under version control"
+      * This folder is now a "Git repository"
+      * Git can record all changes that you make
+      * Now you can "go back in time" to older versions of your files
+      * You can publish your code online
+      * Others can collaborate and send "pull requests"
+      * Official website: [http://www.git-scm.com](http://www.git-scm.com)
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##And what about GitHub?
+
+      * Git is a software, GitHub is a company
+      * They did not invent Git, but they saw the potential early on
+      * They provide services around Git
+      * Mainly, they allow you to host your repositories online for free
+      * They build many features around your repositoriy
+        * Like issue trackers
+        * Code comparison view
+        * Commenting system
+        * Social features like notifications, following, liking,
+      * Main competitor: [Bitbucket](https://bitbucket.org)
+      * Oficial website: https://github.com
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##And finally: GitHub Pages?
+
+      * GitHub allows you to upload a bunch of HTML files
+      * They will be served by their powerful infrastructure for free
+      * You don't have any programming language or database available
+      * So you can only host static pages
+      * Many repositories use this to host their documentation
+      * Official documentation: [https://pages.github.com](https://pages.github.com)
+    </script>
+  </section>
+
+</section>
+<section>
+  <section>
+  <h2>This is the plan</h2>
+
+  <ul>
+    
+    <li><span >Introduction</span></li>
+    <li><span class="toc-active" style="color: #17BAF9;">Demo</span></li>
+    <li><span >Git Basics</span></li>
+    <li><span >Your GitHub Profile</span></li>
+    <li><span >Install & Use MkDocs</span></li>
+    <li><span >GitHub Pages</span></li>
+    
+  </ul>
+</section>
+  <section data-markdown>
+    <script type="text/template">
+      ##From zero to a website in 4 minutes (1/2)
+      First we create a folder and start a new MkDocs project
+<pre><code>mkdir -p ~/Projects/pyladies/pyladies-sg
+cd ~/Projects/pyladies/pyladies-sg
+mkvirtualenv pyladies-sg
+pip install mkdocs
+mkdocs new src
+cd src
+atom .
+# Change site_name in mkdocs.yml
+# Change content in index.html
+mkdocs build
+open site/index.html
+</code></pre>
+      </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##From zero to a website in 4 minutes (2/2)
+      Next we start a Git repo and publish on GitHub
+<pre><code>git init
+atom .gititnore
+# add: site/
+git add .
+git commit
+# Initial commit
+# Go to https://github.com/new
+git remote add origin git@github.com:mbrochh/pyladies-sg.git
+git push -u origin master
+mkdocs gh-deploy
+# Go to http://mbrochh.github.io/pyladies-sg
+</code></pre>
+    </script>
+  </section>
+</section>
+<section>
+  <section>
+  <h2>This is the plan</h2>
+
+  <ul>
+    
+    <li><span >Introduction</span></li>
+    <li><span >Demo</span></li>
+    <li><span class="toc-active" style="color: #17BAF9;">Git Basics</span></li>
+    <li><span >Your GitHub Profile</span></li>
+    <li><span >Install & Use MkDocs</span></li>
+    <li><span >GitHub Pages</span></li>
+    
+  </ul>
+</section>
+  <section data-markdown>
+    <script type="text/template">
+      ##Install Git (Windows)
+
+      * Download and install from here: [https://git-scm.com/download/win](https://git-scm.com/download/win)
+      * On the wizard step "Adjusting your PATH environment"
+        * Chose the second option
+      * Chose default options for all the rest
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Install Git (Ubuntu)
+
+      * Run: sudo apt-get install git
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Install Git (OSX)
+
+      * Download and install from here: [http://git-scm.com/download/mac](http://git-scm.com/download/mac)
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Configure Git
+
+      * You must tell git who you are so that it can write proper logs
+<pre><code>git config --global user.email your@email.com
+git config --global user.name "Your Name"
+</code></pre>
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Create a repository
+
+      * When you run `git init` in any folder, it will be turned into a
+        git-repository.
+<pre><code>mkdir -p ~/Projects/git-test
+cd ~/Projects/git-test
+git init
+</code></pre>
+      * Git creates a hidden folder `.git` in your folder
+      * You can see it with `ls -force`
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Create a file
+
+      * Let's put a first file into your repository
+<pre><code>cd ~/Projects/git-test
+atom test.txt
+# Add "Hello World" to the file, save and close atom
+git status
+</code></pre>
+      * `git status` will show you that there is one new untracked file
+      * **Untracked** means, that this file is currently **not** under version control
+      * If we delete this file now, we will lose it
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Prepare your first commit
+
+      * Let's add our first file to the repository
+
+<pre><code>git add test.txt
+git status
+</code></pre>
+
+      * `git status` will now tell you that a new file has been marked as **to be committed**
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Make your first commit
+
+<pre><code>git commit
+# It opens a command line editor for writing a commit message
+# Press "i" to get into insert-mode
+# Write: "Initial commit"
+# Press CTRL+C to get out of insert-mode
+# Press ":wq" (write and quit)
+git log
+</code></pre>
+
+      * `git commit` will save the current status of your project
+      * `git log` shows you all your past commits
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Make your first change
+
+<pre><code>atom test.txt
+# Remove the "Hello World"
+# Write something else into the file
+# Save and close atom
+git status
+</code></pre>
+
+      * `git status` will tell you that you have changed one file
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Review your change
+
+<pre><code>git diff</code></pre>
+
+      * `git diff` will show you exactly what has been changed
+      * You can exit the diff by pressing `"q"`
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Prepare your second commit
+
+<pre><code>git add test.txt
+git status
+</code></pre>
+
+      * `git status` will now tell you that you are about to commit the changes made in `test.txt`
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Commit your changes
+
+<pre><code>git commit
+# Again, it opens a command line editor for writing a commit message
+# Press "i" to get into insert-mode
+# Write: "Changed test.txt a little bit"
+# Press CTRL+C to get out of insert-mode
+# Press ":wq" (write and quit)
+git log
+</code></pre>
+
+      * `git log` will now show you both commits that you have made
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##This is just the tip of the iceberg
+
+      * The commands above are just minimal basics
+      * Later you will learn about `branches` and `merging` and `forking` and
+        `pulling` and `pushing`
+      * We will probably do a workshop only for Git, soon.
+    </script>
+  </section>
+
+</section>
+<section>
+  <section>
+  <h2>This is the plan</h2>
+
+  <ul>
+    
+    <li><span >Introduction</span></li>
+    <li><span >Demo</span></li>
+    <li><span >Git Basics</span></li>
+    <li><span class="toc-active" style="color: #17BAF9;">Your GitHub Profile</span></li>
+    <li><span >Install & Use MkDocs</span></li>
+    <li><span >GitHub Pages</span></li>
+    
+  </ul>
+</section>
+  <section data-markdown>
+    <script type="text/template">
+      ##Create your GitHub profile
+
+      * Create an account at https://github.com
+      * Verify your email address
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Create your SSH key
+
+      * On Windows, start git-bash
+      * On OSX and Ubuntu just start the Terminal
+
+<pre><code>ssh-keygen -t rsa -b 4096 -C "your@email.com"
+# Press enter several times
+cat ~/.ssh/id_rsa.pub
+# Copy the output into the clipboard (CTRL+C)
+</code></pre>
+
+      * Go to https://github.com/settings/ssh
+      * Click at "Add SSH key"
+      * Paste your public key into the field and click "Add key"
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ## What is this SSH key?
+
+      * SSH is an encrypted network protocol
+      * It allows you to securely login to remote servers
+      * For the encryption to work, you have to create a "key"
+      * The key consists of a public and a private part
+      * Both parts are files in your `~/.ssh/` folder
+      * When you give your public key to GitHub, you can now<br />
+        "SSH into" their server and upload your files
+      * **NEVER** give away your private key.
+      * If you lose your private key, you lose access to all servers<br />
+        where you used it before (not so bad for GitHub, just make<br />
+        a new keypair).
+    </script>
+  </section>
+
+</section>
+<section>
+  <section>
+  <h2>This is the plan</h2>
+
+  <ul>
+    
+    <li><span >Introduction</span></li>
+    <li><span >Demo</span></li>
+    <li><span >Git Basics</span></li>
+    <li><span >Your GitHub Profile</span></li>
+    <li><span class="toc-active" style="color: #17BAF9;">Install & Use MkDocs</span></li>
+    <li><span >GitHub Pages</span></li>
+    
+  </ul>
+</section>
+  <section data-markdown>
+    <script type="text/template">
+      ##Install MkDocs
+
+      * Create a virtual environment and install MkDocs
+      * You can learn more about this in [our past workshop](http://mbrochh.github.io/python-introduction/#/9)
+
+<pre><code>mkvirtualenv pyladies-sg
+pip install mkdocs
+</code></pre>
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Start your MkDocs project
+
+<pre><code>mkdir -p ~/Projects/mkdocs-test
+cd ~/Projects/mkdocs-test
+mkdocs new src
+cd src
+ls
+</code></pre>
+
+      * The `mkdocs` command creates a config file (`mkdocs.yml`)
+      * and a first content file (`docs/index.md`) for you
+    </script>
+  </section>
 </section>
 
             </div>
