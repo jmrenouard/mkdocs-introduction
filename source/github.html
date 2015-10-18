@@ -46,4 +46,72 @@ cat ~/.ssh/id_rsa.pub
     </script>
   </section>
 
+  <section data-markdown>
+    <script type="text/template">
+      ## Let's create a public repository (1/2)
+
+      * You should still have the `git-test` repository we created earlier
+      * Go to [https://github.com/new](https://github.com/new)
+      * Name your new repository `git-test` & click at "Create repository"
+      * You now have an empty public repository
+      * GitHub shows you some hints on what to do next
+      * Make sure to switch the button at the top from "HTTPS" to "SSH"
+      * That way you don't have to enter your username and password when you
+        push code because you are using your SSH-key to identify yourself
+      * (continue reading on next slide)
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ## Let's create a public repository (2/2)
+
+      * Look at the lower part of the instructions
+      * This part is for existing repositories (you already have it on your PC)
+      * Copy and paste the two commands into your command line
+
+<pre><code># They look like this:
+git remote add origin git@github.com:YOURUSERNAME/git-test.git
+git push -u origin master
+</code></pre>
+
+      * Refresh your browser
+      * The GitHub instructions will disappear
+      * You will now see the code that you have just pushed
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ## Clone your repository (1/2)
+
+      * Let's say your laptop explodes and you lose all your files (touch wood!)
+      * to simulate this situation, delete the `git-test` folder on your computer
+
+<pre><code>rm -rf ~/Projects/git-test</code></pre>
+
+      * Now you have a new computer and you clone your repository from GitHub
+      * Open your repository on GitHub in your browser
+      * There is a little link at the bottom right:
+
+      <img src="./img/clone.png" />
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ## Clone your repository (2/)
+
+      * copy the SSH link from the GitHub page
+      * and clone the repository into your computer:
+
+<pre><code>cd ~/Projects
+git clone git@github.com:YOURUSERNAME/git-test.git
+cd git-test
+ls
+</code></pre>
+
+      * You should see your files again :)
+    </script>
+  </section>
 </section>

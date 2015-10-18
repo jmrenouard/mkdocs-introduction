@@ -28,4 +28,106 @@ ls
       * and a first content file (`docs/index.md`) for you
     </script>
   </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Change some settings
+
+<pre><code>atom mkdocs.yml
+</code></pre>
+
+      Make it look like this:
+
+<pre><code>site_name: My MkDocs Test
+pages:
+- Home: 'index.md'
+- About: 'about.md'
+</code></pre>
+
+      * also create a new file `about.md` in the `docs` folder
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Write some content
+
+      * Open `index.md` in atom and make it look like this:
+
+<pre><code>(HINT: you can scroll down in this code box)
+# First headline
+
+## A sub-headline
+
+### You get the idea!
+
+Here is some text with a [link to Google](http://google.com)
+
+Find out more at the [About page](about.md)
+
+* here is
+* an unordered
+* list of things
+
+Make sure to add text between two lists.
+
+1. and here is
+1. an ordered
+1. list of things
+
+Here is a word in **fat** and another one in *italics*.
+
+Here is a word that is `code`.
+
+And here is a so called fenced code-block:
+
+```python
+import datetime
+
+print datetime.datetime.now
+```
+</code></pre>
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Write some more content
+
+      * Open `about.md` in atom and make it look like this:
+
+<pre><code># About Us
+
+If you want to find out more about us, you have to come to our meetups :P
+</code></pre>
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Start a mini-webserver
+
+      * It's time to have a look at our website
+      * MkDocs comes with a mini-webserver
+
+<pre><code>mkdocs serve</code></pre>
+
+      * Open `http://localhost:8000` in your browser
+      * Try to make changes to your content and save them
+      * The website should update automatically when you save the file
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Official Documentation
+
+      * As you can see it's all pretty simple
+      * First you add some pages to `mkdocs.yml`
+      * Then you create the files and write Markdown content
+      * Finally you look at it with `mkdocs serve`
+      * Learn more about [writing your docs](http://www.mkdocs.org/user-guide/writing-your-docs/)
+      * Learn more about the [available configuration](http://www.mkdocs.org/user-guide/configuration/)
+    </script>
+  </section>
 </section>

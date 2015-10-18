@@ -1,0 +1,48 @@
+<section>
+  {% with active=active %}{% include "source/toc.html" %}{% endwith %}
+  <section data-markdown>
+    <script type="text/template">
+      ##GitHub Pages
+
+      * We know: GitHub hosts the world's open source code
+      * We also know: Every good software should have a good documentation
+      * That means, all of GitHub's users have the same problem:
+        * "where to host my documentation??"
+        * If you wrote a really popular software, hosting documentation<br />
+          can even be quite expensive
+      * GitHub solves that problem with [GitHub Pages](https://pages.github.com)
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##How does it work?
+
+      * MkDocs makes it so easy, you don't even need to know how it works
+      * But in case you are curious, it works like this:
+        * if you create a branch called `gh-pages` in your repository
+        * and if you put some static HTML files into that branch
+        * then GitHub will see that and create an URL like this:
+        * http://username.github.io/repo-name
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##How does MkDocs do it?
+
+      * When you are done editing your content, simply run:
+
+<pre><code>mkdocs gh-deploy</code></pre>
+
+      * MkDocs will create a `gh-pages` branch
+      * It will run `mkdocs build` and generate the `site` folder
+      * It will copy the `site` folder into the `gh-pages` branch
+      * It will run `git push origin:gh-pages`
+        * That means: It pushes your local `gh-pages` branch into your<br />
+          public repository on GitHub
+      * GitHub will automatically notice that the `gh-pages` branch has changed
+      * A few seconds later, your new content will be visible online
+    </script>
+  </section>
+</section>
